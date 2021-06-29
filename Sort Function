@@ -1,0 +1,33 @@
+# Bubble Sorting an Array Using Python ...
+
+# Intialising the Array
+import array as arr
+A = arr.array('i',[30,45,-23,-46,0,76,24,86,73])
+
+l=len(A) # Finding Length of the Array
+print()
+for k in range(l): # Printing the Array
+    print(A[k],end=' ')
+print()
+print()
+temp = 0
+# Sorting The Given ARRAY
+for j in range(l-1): # Total Passes
+    Swap = 0
+    for i in range (l-1): # Total Swaps
+        if (A[i]>A[i+1]):
+            temp = A[i]
+            A[i] = A[i+1]
+            A[i+1] = temp
+            Swap+=1
+    if (Swap>0):
+        print('Total Swaps in (',j+1,') th pass are',Swap)
+    else:
+        print('\nArray Already Sorted ... !!! ( Breaking Out )')
+        break
+
+print('\nThe Given Array In Sorted Form is :\n')
+for k in range(l):
+    print(A[k],end=' ') # Printing The Sorted Array
+print()
+# End of Program ...
